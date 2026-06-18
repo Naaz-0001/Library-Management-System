@@ -9,10 +9,10 @@ import Foundation
 
 class Magazine: LibraryItem {
     
-    var issueNumber: String
+    var issueNumber: Int
     var publicationMonth: String
     
-    init(itemID: String, title: String, isBorrowed: Bool, issueNumber: String, publicationMonth: String) {
+    init(itemID: String, title: String, isBorrowed: Bool, issueNumber: Int, publicationMonth: String) {
         self.issueNumber = issueNumber
         self.publicationMonth = publicationMonth
         super.init(itemID: itemID, title: title, isBorrowed: isBorrowed)
@@ -22,11 +22,11 @@ class Magazine: LibraryItem {
         return "\(super.displayInfo()), Issue: \(issueNumber), Month: \(publicationMonth)"
     }
     
-    override func borrowItem() {
-        
-    }
-    
-    override func returnItem() {
-        
-    }
+//    override func borrowItem() {
+//        
+//    }
+//    
+//    override func returnItem() {
+//        
+//    }
 }

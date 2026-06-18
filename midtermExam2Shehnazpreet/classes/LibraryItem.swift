@@ -21,10 +21,23 @@ class LibraryItem: Borrowable{
     func displayInfo() -> String{
         return "  ID: \(itemID)       Name: \(title)       Status: \(isBorrowed ? "Borrowed" : "Available")"
     }
+    
+    
     func borrowItem() {
-        isBorrowed = true
+        if !isBorrowed {
+            isBorrowed = true
+            print("Item borrowed successfully.")
+        } else {
+            print("Error: Item is already borrowed")
+        }
     }
     func returnItem() {
-        isBorrowed = false
+        if isBorrowed {
+            isBorrowed = false
+            print("Item returned successfully.")
+        }
+        else{
+            print("Error: Item is already available")
+        }
     }
 }

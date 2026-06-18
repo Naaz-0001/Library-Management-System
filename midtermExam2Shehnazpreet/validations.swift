@@ -59,7 +59,7 @@ func getUniqueItemID() -> String {
 
         let id = getValidString(prompt: "Enter unique Item ID:")
 
-        if idExit(id: id){
+        if idExist(id: id){
             print("An item with this ID already exists. Please enter another ID.")
         } else {
             return id
@@ -67,11 +67,11 @@ func getUniqueItemID() -> String {
     }
 }
 
-func idExit(id:String) -> Bool{
+func idExist(id: String) -> Bool {
     return libraryItems[id] != nil
 }
 
-func getExistingItemID(prompt: String) -> Int? {
+func getExistingItemID(prompt: String) -> String? {
 
     while true {
 
@@ -83,25 +83,19 @@ func getExistingItemID(prompt: String) -> Int? {
             return nil
         }
 
-        //validate number
-        guard let id = input else {
-            print("Invalid input. Please enter a valid number.")
-            continue
+        // check if ID exists
+        if idExist(id: input) {
+            return input
         }
 
-        //id check
-        if idExit(id: id) {
-            return id
-        }
-
-        print("Employee not found. Please try again or ")
+        print("Item not found. Please try again.")
         print("Enter 0 to return to the main menu.")
         print()
     }
 }
 //
 
-func itemAvailable() -> Bool {
+func itemsAvailable() -> Bool {
     if libraryItems.isEmpty {
         print("No items found. Please add an item first")
         return false

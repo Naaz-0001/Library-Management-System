@@ -10,8 +10,8 @@ import Foundation
 var book1: Book = Book( itemID: "abc1", title: "The Great Gatsby", isBorrowed: true, author: "naaz", numberOfPages: 100)
 var book2: Book = Book( itemID: "abc2", title: "The Great Gatsby", isBorrowed: true, author: "naaz", numberOfPages: 100)
 
-var mag1: Magazine = Magazine(itemID: "abc3", title: "The Great Gatsby", isBorrowed: true, issueNumber: "qweeww", publicationMonth: "Jan")
-var mag2: Magazine = Magazine(itemID: "abc4", title: "The Great Gatsby", isBorrowed: true, issueNumber: "qweeww", publicationMonth: "Jan")
+var mag1: Magazine = Magazine(itemID: "abc3", title: "The Great Gatsby", isBorrowed: true, issueNumber: 234, publicationMonth: "Jan")
+var mag2: Magazine = Magazine(itemID: "abc4", title: "The Great Gatsby", isBorrowed: true, issueNumber: 123, publicationMonth: "Jan")
 
 var libraryItems: [String:LibraryItem] = [
     "abc1" : book1,
@@ -54,9 +54,9 @@ while true {
         
     case "4": searchItems()
         
-    case "5": borrowItem()
+    case "5": itemBor()
         
-    case "6": returnItem()
+    case "6": itemRet()
         
     case "7": deleteItem()
         
