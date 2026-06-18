@@ -46,17 +46,23 @@ while true {
     switch userInput {
         
         
-    case "1": addFtEmp()
+    case "1": addBook()
         
-    case "2": addPtEmp()
+    case "2": addMag()
         
-    case "3": displayEmp()
+    case "3": displayItems()
         
-    case "4": removeEmp()
+    case "4": searchItems()
         
-    case "5": searchEmp()
+    case "5": borrowItem()
         
-    case "6":
+    case "6": returnItem()
+        
+    case "7": deleteItem()
+        
+    
+        
+    case "8":
         print("\n Exiting...")
         break
         
