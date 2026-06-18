@@ -19,14 +19,7 @@ class Magazine: LibraryItem {
     }
     
     override func displayInfo() -> String {
-        return "\(super.displayInfo()), Issue: \(issueNumber), Month: \(publicationMonth)"
+        return "\(super.displayInfo()),    Issue Number: \(issueNumber),    Month: \(publicationMonth)"
     }
     
-//    override func borrowItem() {
-//        
-//    }
-//    
-//    override func returnItem() {
-//        
-//    }
 }

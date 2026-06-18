@@ -68,7 +68,7 @@ while true {
         
     default : print("Invalid option, try again")
     }
-    if userInput == "6" {
+    if userInput == "8" {
         break;
     }
     

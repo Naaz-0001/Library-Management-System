@@ -76,7 +76,7 @@ func itemBor(){
         if idExist(id: idToBorrow){
             let itemId = idToBorrow
             libraryItems[itemId]?.borrowItem()
-            
+            return
         }
     }
 }
@@ -91,7 +91,7 @@ func itemRet(){
         if idExist(id: idToReturn){
             let itemId = idToReturn
             libraryItems[itemId]?.returnItem()
-            
+            return
         }
     }
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 class Book: LibraryItem {
-
+    
     var author: String
     var numberOfPages: Int
     
@@ -22,12 +22,5 @@ class Book: LibraryItem {
     override func displayInfo() -> String {
         return "\(super.displayInfo()), Author: \(author), Number of Pages: \(numberOfPages)"
     }
-    
-//    override func borrowItem() {
-//        
-//    }
-//    
-//    override func returnItem() {
-//        
-//    }
 }
+
