@@ -7,7 +7,7 @@
 
 import Foundation
 
-class LibraryItem{
+class LibraryItem: Borrowable{
     var itemID : String
     var title : String
     var isBorrowed : Bool
@@ -20,5 +20,11 @@ class LibraryItem{
     
     func displayInfo() -> String{
         return "  ID: \(itemID)       Name: \(title)       Status: \(isBorrowed ? "Borrowed" : "Available")"
+    }
+    func borrowItem() {
+        isBorrowed = true
+    }
+    func returnItem() {
+        isBorrowed = false
     }
 }
